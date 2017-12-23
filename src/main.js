@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import iView from 'iview';
+//import VueAwesomeSwiper from 'vue-awesome-swiper';
+
 import VueRouter from 'vue-router';
 import Routers from './router';
 
@@ -9,7 +11,7 @@ import 'iview/dist/styles/iview.css';
 
 
 Vue.use(VueRouter);
-
+//Vue.use(VueAwesomeSwiper);
 
 Vue.use(iView);
 
@@ -31,8 +33,8 @@ router.beforeEach((to, from, next) => {
 router.afterEach(() => {
     iView.LoadingBar.finish();
     window.scrollTo(0, 0);
-});
-
+}); 
+ 
 
 
 new Vue({

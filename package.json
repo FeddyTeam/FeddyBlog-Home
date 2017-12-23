@@ -16,10 +16,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "vue": "^2.2.6",
-    "vue-router": "^2.3.1",
+    "array-includes": "^3.0.3",
+    "axios": "^0.15.3",
     "iview": "^2.0.0-rc.13",
-    "axios": "^0.15.3"
+    "swiper": "^4.0.7",
+    "vue": "^2.2.6",
+    "vue-router": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
