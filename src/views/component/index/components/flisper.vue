@@ -20,11 +20,11 @@
 
 </template>
 <script>
-import Swiper from '../../../libs/swiper.min.js';
+import Swiper from '../../../../libs/swiper.min.js';
 
 /* import p1 from '../../../image/IMG_4023.jpg'; */
-import p2 from '../../../image/IMG_4062.jpg';
-import p3 from '../../../image/IMG_7025.jpg';
+import p2 from '../../../../image/IMG_4062.jpg';
+import p3 from '../../../../image/IMG_7025.jpg';
 export default {
      data() {
         return {
@@ -81,12 +81,13 @@ export default {
 </script>
 <style scoped>
 
-@import '../../../css/swiper.min.css';
+@import '../../../../css/swiper.min.css';
 
 .flisper {
     height: 550px;
     position: relative;
     overflow: hidden;
+    margin-bottom: 70px;
 }
 
 .header{

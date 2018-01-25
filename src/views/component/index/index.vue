@@ -14,13 +14,21 @@ body {
 }
 
 
+
 .content_list {
     position: relative;
     overflow: hidden;
-    height: 150px;
+    height: 180px;
     text-align: center;
     border-radius: 3px;
     cursor: pointer;
+}
+
+.content {
+ 
+ margin-top: 30px;
+ padding: 20px 50px;
+
 }
 
 
@@ -63,6 +71,7 @@ body{
         <div class="main-body">
             <active></active>
             <project></project>
+            <blog></blog>
         </div>
         <div class="layout-copy">
             2011-2016 &copy; TalkingData
@@ -72,17 +81,19 @@ body{
 <script>
 
 
-import ihHead from './common/ihhead';
+import ihHead from '../../common/ihhead';
 
-import active from './component/index/active';
-import flisper from './component/index/flisper';
-import project from './component/index/project';
+import active from './components/active';
+import flisper from './components/flisper';
+import project from './components/project';
+import blog from './components/blog';
 export default {
     components: {
         ihHead,
         active,
         project,
-        flisper
+        flisper,    
+        blog
     },
     data () {
         return {

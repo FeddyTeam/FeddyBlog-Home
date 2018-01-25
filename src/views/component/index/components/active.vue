@@ -1,15 +1,7 @@
 
 <style scoped>
-.active {
-    margin-top: 70px;
-     padding: 0 50px;
-}
 
 
-
-.content {
-    padding: 20px 30px;
-}
 .content_list img{
     overflow: hidden;
     width: 100%;
@@ -100,8 +92,8 @@
      "http://upload-images.jianshu.io/upload_images/2865721-b7c651e8e40549bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
     '../../../image/IMG_4023.jpg'
  ]
- import pic1 from "../../../image/IMG_4023.jpg"
-import itemTitle from '../../common/itemTitle';
+ import pic1 from "../../../../image/IMG_4023.jpg"
+import itemTitle from './itemTitle';
 export default {
     components: {
         itemTitle,
@@ -111,6 +103,7 @@ export default {
             title:{
                 CHName:"线下活动",
                 ENName:"Activities",
+                discribe:"定期组织分享会，帮助你们找到更好的自己"
             },
             active: [{
                 id: 1,

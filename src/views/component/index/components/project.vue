@@ -1,29 +1,5 @@
 
 <style scoped>
-.project {
-    margin-top: 70px;
-    padding: 0 50px;
-}
-
-.head {
-    text-align: center;
-}
-
-.head .title {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 20px;
-    border-left: 4px solid #ffc800;
-    padding: 10px 20px;
-}
-
-.content {
-    padding: 20px 30px;
-}
-
-
-
-
 
 .content_list:hover {
  box-shadow: 0 5px 8px 2px #b6b6b6;
@@ -104,8 +80,8 @@
     </div>
 </template>
 <script>
-import a from '../../../image/logo.png';
-import itemTitle from '../../common/itemTitle';
+import a from '../../../../image/logo.png';
+import itemTitle from './itemTitle';
 export default {
 
     components: {
@@ -116,6 +92,7 @@ export default {
             title: {
                 CHName: "开源项目",
                 ENName: "OpenSourse",
+                 discribe: "来呀，快活呀，反正有，大把时光"
             },
             project: [{
                 id: 1,

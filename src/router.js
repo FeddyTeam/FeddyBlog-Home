@@ -1,4 +1,4 @@
-import index from './views/index'
+import index from './views/component/index'
 import active from './views/component/active/index'
 
 const routers = [{

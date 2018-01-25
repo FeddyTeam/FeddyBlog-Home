@@ -6,6 +6,14 @@
     line-height: 60px;
     font-size: 16px;
     overflow: hidden;
+    position: fixed;
+    top:0;
+    z-index: 999;
+    width: 100%;
+}
+
+.layout-ceiling + *{
+    margin-top:55px;
 }
 
 .layout-ceiling .layout-logo {
