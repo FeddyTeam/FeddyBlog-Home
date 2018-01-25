@@ -4,10 +4,30 @@ body {
     min-width: 1000px;
 }
 
+.more {
+    text-align: right;
+    margin: 10px 38px;
+    cursor: pointer;
+    color: #3d86d0;
+    font-size: 14px;
+    text-decoration-line: underline;
+}
+
+
+.content_list {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
 </style>
 
 <style scoped>
-@import '../css/swiper.min.css';
+
 body{
     min-width:1000px;
 }
@@ -33,52 +53,13 @@ body{
 
 
 
-.flisper {
-    height: 400px;
-    position: relative;
-}
-
-h4 {
-
-    font-size: 30px;
-    margin: auto;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: block;
-}
-
-.flisper img {
-
-    height: 100%;
-    width: 100%;
-}
 </style>
 
 <template>
     <div class="layout">
-        <ih-head></ih-head>
-        <div class="flisper">
-
-            <div class="swiper-container" style="height:100%">
-                <div class="swiper-wrapper">
-                     <div class="swiper-slide"  v-for="item in flisper" :key="item.tag">
-                        <img :src="item.src" alt="">
-                        <h4>{{item.title}}</h4>
-                    </div> 
-
-                </div>
-                <!-- 如果需要分页器 -->
-                <div class="swiper-pagination"></div>
-
-                <!-- 如果需要导航按钮 -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-
-        </div>
-
+        <ih-head :isActive="isActive"></ih-head>
+        <flisper></flisper>
+       
         <div class="main-body">
             <active></active>
             <project></project>
@@ -89,62 +70,25 @@ h4 {
     </div>
 </template>
 <script>
-import Swiper from '../libs/swiper.min.js';
-import a from '../image/logo.png';
-import ihHead from '../common/ihhead';
 
-import active from './component/active';
-import project from './component/project';
+
+import ihHead from './common/ihhead';
+
+import active from './component/index/active';
+import flisper from './component/index/flisper';
+import project from './component/index/project';
 export default {
     components: {
         ihHead,
         active,
-        project
+        project,
+        flisper
     },
-    data() {
+    data () {
         return {
-            mySwiper: "",
-            flisper: [
-                {
-                    tag: 1,
-                    title: "第一次分享会",
-                    src: a
-                },
-                {
-                    tag: 2,
-                    title: "第2次分享会",
-                    src: a
-                },
-                {
-                    tag: 3,
-                    title: "第3次分享会",
-                    src: a
-                }
-            ]
+             isActive: 0,
         }
-    },
-    methods: {
-
-    },
-    mounted() {
-        console.log('mounted', this);
-        this.mySwiper = new Swiper('.swiper-container', {
-            direction: 'horizontal',
-            loop: true,
-
-            // 如果需要分页器
-            pagination: '.swiper-pagination',
-
-            // 如果需要前进后退按钮
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-
-            // 如果需要滚动条
-           // scrollbar: '.swiper-scrollbar',
-        });
-        /* var swiper1 = new Swiper('#swiper1');
-        var swiper2 = new Swiper('#swiper2');
-        var swiper3 = new Swiper('#swiper3'); */
     }
+ 
 };
 </script>
