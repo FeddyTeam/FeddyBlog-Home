@@ -86,6 +86,7 @@ export default {
 .flisper {
     height: 550px;
     position: relative;
+    overflow: hidden;
 }
 
 .header{
@@ -108,6 +109,8 @@ h4 {
 }
 
 .flisper img {
+    position: absolute;
+    top: -200px;
     width: 100%;
 }
 
