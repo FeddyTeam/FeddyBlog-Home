@@ -5,14 +5,25 @@ body {
 }
 
 .more {
+    font-weight: normal;
+    float: right;
     text-align: right;
-    margin: 10px 38px;
+    margin: 0 80px;
     cursor: pointer;
-    color: #3d86d0;
+    color: #949494;
     font-size: 14px;
+    -webkit-text-decoration-line: underline;
+    -moz-text-decoration-line: underline;
     text-decoration-line: underline;
+
 }
 
+
+.more:hover{
+    
+ color: #208db7;
+
+}
 
 
 .content_list {
@@ -27,7 +38,7 @@ body {
 .content {
  
  margin-top: 30px;
- padding: 20px 50px;
+ padding: 20px 80px;
 
 }
 

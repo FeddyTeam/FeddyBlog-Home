@@ -7,7 +7,7 @@
             <Row :gutter="40">
                 <Col span="14">
                 <div class="item hotPage">
-                    <h3 class="md-title">精选博文</h3>
+                    <h3 class="md-title">精选博文<span class="more">更多&nbsp;>></span></h3>
                     <div v-for="item in pageObj" :key="item.id">
                         <span :href="item.url" class="name">{{item.name}}</span>
                         <span class="info">{{item.author}}

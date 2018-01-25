@@ -99,26 +99,26 @@ export default {
                 href: a,
                 describe:"无需登录的文字同步平台",
                 theme: "同步Fun！",
-                color: "#7dd0e3"
+                color: "#a3e2f0"
             },
             {
                 id: 2,
                 href: a,
                  describe: "",
                 theme: "Feddy博客",
-                color: "#ffabab"
+                color: "#f2c7c7"
             }, {
                 id: 3,
                 href: a,
                 describe:"Feddy线下活动管理平台",
                 theme: "play together",
-                color: "#b0b2ed"
+                color: "#c8c9f0"
             }, {
                 id: 4,
                 href: a,
                 describe:"待办事项管理平台",
                 theme: "TodoList",
-                color: "#e9d547"
+                color: "#ecde74"
             }
             ]
         }
