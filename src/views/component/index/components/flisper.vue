@@ -37,12 +37,12 @@ export default {
                 }, */
                 {
                     tag: 2,
-                    title: "第2次分享会",
+                    title: "Feddy线下分享会",
                     src: p2
                 },
                 {
                     tag: 3,
-                    title: "第3次分享会",
+                    title: "Feddy线下分享会",
                     src: p3
                 }
             ]

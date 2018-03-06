@@ -111,7 +111,7 @@ export default {
                  {
                     status: 1,
                     name: "博客",
-                    path: "./blog"
+                    path: "https://blog.feddy.org"
                 }, {
                     status: 2,
                     name: "线下活动",
