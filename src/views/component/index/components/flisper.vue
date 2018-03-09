@@ -23,8 +23,8 @@
 import Swiper from '../../../../libs/swiper.min.js';
 
 /* import p1 from '../../../image/IMG_4023.jpg'; */
-import p2 from '../../../../image/IMG_4062.jpg';
-import p3 from '../../../../image/IMG_7025.jpg';
+import p2 from 'http://p5942h2x3.bkt.clouddn.com/IMG_7025.JPG';
+import p3 from 'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG';
 export default {
      data() {
         return {

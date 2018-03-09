@@ -87,9 +87,8 @@
  let pic = [
      'http://upload-images.jianshu.io/upload_images/2865721-283860273314f22c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
      "http://upload-images.jianshu.io/upload_images/2865721-b7c651e8e40549bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
-    '../../../image/IMG_4023.jpg'
+    'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG'
  ]
- import pic1 from "../../../../image/IMG_4023.jpg"
 import itemTitle from './itemTitle';
 export default {
     components: {
@@ -113,7 +112,7 @@ export default {
                 theme: "让我们共同成长",
             }, {
                 id: 3,
-                src:  pic1,
+                src:  pic1[2],
                 theme: "学弟学妹，带你们飞！",
             }]
         }
