@@ -7,7 +7,7 @@
             <Row :gutter="40">
                 <Col span="14">
                 <div class="item hotPage">
-                    <h3 class="md-title">精选博文<span class="more" @click="window.open('https://blog.feddy.com','_black')">更多&nbsp;>></span></h3>
+                    <h3 class="md-title">精选博文<span class="more" @click="window.open('https://blog.feddy.org','_blank')">更多&nbsp;>></span></h3>
                     <div v-for="item in pageObj" :key="item.id">
                         <span  @click="toBlog(item.url)" class="name">{{item.name}}</span>
                         <span class="info">{{item.author}}

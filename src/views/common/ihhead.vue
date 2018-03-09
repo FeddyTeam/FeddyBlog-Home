@@ -82,9 +82,8 @@
             <li 
             v-for="item in nav" 
             :key ="item.name" 
-            :class='{"active":isActive ==item.status}'>
-                <router-link :to="item.path">{{item.name}}</router-link>
-            <!-- <a @click="$router.push({name:item.path})">{{item.name}}</a> -->
+            :class='{"active":isActive == item.status}'>
+                <a @click = "toPath(item.path)">{{item.name}}</a>
             </li>
 
         </div>
@@ -96,7 +95,7 @@ export default {
     props: {
         isActive:{
             type:Number,
-            required:true
+            required:true   
         }
     },
     data () {
@@ -111,7 +110,7 @@ export default {
                  {
                     status: 1,
                     name: "博客",
-                    path: "https://blog.feddy.org"
+                    path: "/blog"
                 }, {
                     status: 2,
                     name: "线下活动",
@@ -119,11 +118,22 @@ export default {
                 }, {
                      status: 3,
                      name: "关于我们",
-                     path: "https://blog.feddy.org/about-feddy/"
+                     path: "/about"
                  }
             ]
                
             
+        }
+    },
+    methods: {
+        toPath(url){
+            if(url === '/blog'){
+                window.open('https://blog.feddy.org')
+            }else if(url === '/about'){
+                window.open('https://blog.feddy.org/about-feddy/')
+            }else{
+                this.$router.push(url);
+            }
         }
     }
 }

@@ -3,6 +3,8 @@
  
 import party from './views/component/active/index'
 import index from './views/component/index/index'
+import blog from './views/component/blog/index'
+import about from './views/component/about/index'
 
 
 const routers = [{
