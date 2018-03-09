@@ -7,9 +7,9 @@
             <Row :gutter="40">
                 <Col span="14">
                 <div class="item hotPage">
-                    <h3 class="md-title">精选博文<span class="more">更多&nbsp;>></span></h3>
+                    <h3 class="md-title">精选博文<span class="more" @click="window.open('https://blog.feddy.com','_black')">更多&nbsp;>></span></h3>
                     <div v-for="item in pageObj" :key="item.id">
-                        <span :href="item.url" class="name">{{item.name}}</span>
+                        <span  @click="toBlog(item.url)" class="name">{{item.name}}</span>
                         <span class="info">{{item.author}}
                             <span class="time">{{item.time}}</span>
                         </span>
@@ -20,7 +20,7 @@
                 <div class="item category">
 
                      <h3 class="md-title">文章分类</h3>
-                    <span v-for="item in category" :key="item.name" @click="toBlog(item)">{{item.name}}</span>
+                    <span v-for="item in category" :key="item.name" @click="toBlog(item.url)">{{item.name}}</span>
                 </div>
                 </Col>
             </Row>
@@ -33,21 +33,27 @@
     let pageObj = [{
         id: "1",
         name: "koa2如何设置和清除cookie？",
-        url: "#",
-        time: "2018-01-02",
-        author: "TRY"
+        url: "https://blog.feddy.org/koa2ru-he-she-zhi-he-qing-chu-cookie/",
+        time: "2017-12-06",
+        author: "frank"
     }, {
         id: "1",
         name: "有趣的 CouchDB 和 PouchDB",
-        url: "#",
-        time: "2018-01-02",
-        author: "Luise"
+        url: "https://blog.feddy.org/funny-couchdb-and-pouchdb/",
+        time: "2017-08-20",
+        author: "Nulla"
     }, {
         id: "1",
         name: "使用Yeoman定制前端脚手架",
-        url: "#",
-        time: "2018-01-02",
+        url: "https://blog.feddy.org/shi-yong-yeomanding-zhi-qian-duan-jiao-shou-jia/",
+        time: "2017-08-15",
         author: "Jake"
+    }, {
+        id: "1",
+        name: "JavaScript 字符码和字节码转换",
+        url: "https://blog.feddy.org/javascript-zi-fu-ma-he-zi-jie-ma-zhuan-huan/",
+        time: "2017-07-28",
+        author: "Nulla"
     }];
     let category = [{
         name:"javescript",
@@ -62,16 +68,16 @@
         name: "css/html",
         url: "#"
     }, {
-        name: "ES6",
+        name: "vue",
         url: "#"
     }, {
-            name: "ES6",
+            name: "react",
             url: "#"
         }, {
-        name: "ES6",
+        name: "http",
         url: "#"
     }, {
-        name: "ES6",
+        name: "面试",
         url: "#"
     }]
     export default {
@@ -79,8 +85,8 @@
             itemTitle,
         },
         methods: {
-            toBlog(item){
-
+            toBlog(url){
+                window.open(url, '_blank');;
             }
         },
         data() {
@@ -98,6 +104,9 @@
 </script>
 
 <style scoped>
+    .more{
+        margin: 0 30px;
+    }
     .content {
         min-height: 150px;
     }
@@ -106,7 +115,7 @@
         border-radius: 8px;
         border: 1px solid #ddd;
         min-height: 150px;
-            padding: 20px 5px;
+        padding: 20px 5px;
     }
 
     .item h3 {
@@ -124,14 +133,21 @@
 
     .hotPage>div{
         cursor: pointer;
-        height: 30px;
-        line-height: 30px;
+        height: 40px;
+        line-height: 40px;
         margin: 0 30px;
-        font-size: 14px;
+        font-size: 16px;
         overflow: hidden;
-        color:#6b6b6b;
+        color:#8c8c8c;
+        
 
     }
+    
+    .hotPage>div:hover {   
+        color:#6b6b6b;
+        text-decoration: underline;
+    }
+
     .hotPage .info{
         float: right;
         color:#a4a4a4;
@@ -148,6 +164,9 @@
         padding: 10px;
         border: 1px solid #ddd;
         border-radius: 10px;
-
+        cursor: pointer;
+    }
+    .category span:hover{
+        background:#eee;
     }
 </style>

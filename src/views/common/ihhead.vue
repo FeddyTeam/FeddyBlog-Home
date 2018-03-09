@@ -20,7 +20,6 @@
     float: left;
     height: 100%;
     margin-left: 30px;
-
     padding: 5px
 }
 
@@ -30,8 +29,8 @@
     font-size: 30px;
     position: absolute;
     display: inline-block;
-    top: 5px;
-    left: 120px;
+    top: 0;
+    left: 110px;
 }
 
 .layout-ceiling .layout-logo img {
@@ -84,7 +83,8 @@
             v-for="item in nav" 
             :key ="item.name" 
             :class='{"active":isActive ==item.status}'>
-            <a @click="$router.push({name:item.path})">{{item.name}}</a>
+                <router-link :to="item.path">{{item.name}}</router-link>
+            <!-- <a @click="$router.push({name:item.path})">{{item.name}}</a> -->
             </li>
 
         </div>
@@ -106,7 +106,7 @@ export default {
                 {
                     status:0,
                     name: "首页",
-                    path: "./index"
+                    path: "/"
                 },
                  {
                     status: 1,
@@ -115,11 +115,11 @@ export default {
                 }, {
                     status: 2,
                     name: "线下活动",
-                    path: "./active"
+                    path: "/party"
                 }, {
                      status: 3,
                      name: "关于我们",
-                     path: "https://feddy.org/about-feddy/"
+                     path: "https://blog.feddy.org/about-feddy/"
                  }
             ]
                

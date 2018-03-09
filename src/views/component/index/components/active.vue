@@ -2,11 +2,11 @@
 <style scoped>
 
 
-.content_list img{
+.content_item img{
     overflow: hidden;
     width: 100%;
 }
-.content_list:hover {
+.content_item:hover {
     box-shadow: 0 5px 8px 2px #b6b6b6;
     -webkit-animation-name: hover;
     -webkit-animation-duration: 0.5s;
@@ -23,11 +23,8 @@
     }
 }
 
-.content_list:nth-child(1) {
-    background: #e3e3e3;
-}
 
-.content_list .text{
+.content_item .text{
     position: absolute;
     width: 100%;
     top:0;
@@ -38,7 +35,7 @@
     opacity:0;
 
 }
-.content_list .text:hover{
+.content_item .text:hover{
     -webkit-animation-name:text-hover;
     -webkit-animation-duration: 1s;
     -webkit-animation-fill-mode: both;
@@ -50,7 +47,7 @@
         opacity:0.3;
     }
 }
-.content_list .text div{
+.content_item .text div{
     margin: auto;
     position: absolute;
     height: 40px;
@@ -71,8 +68,8 @@
         <itemTitle :title = "title"></itemTitle>
         <div class="content">
             <Row :gutter="30">
-                <Col v-for="item in active" :key="item.id" span="8">
-                <div class="content_list">
+                <Col class="content_list"v-for="item in active" :key="item.id" span="8">
+                <div class="content_item">
                     <img :src="item.src">
                     <div class="text">
                         <div>{{item.theme}}</div>
@@ -81,7 +78,7 @@
                 </Col>
             </Row>
         </div>
-    <div class="more">更多&nbsp;>></div>
+    <div class="more" @click="$router.push('/party')">更多&nbsp;>></div>
 
     </div>
 </template>

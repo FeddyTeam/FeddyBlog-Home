@@ -1,5 +1,9 @@
-import index from './views/component/index'
-import active from './views/component/active/index'
+
+
+ 
+import party from './views/component/active/index'
+import index from './views/component/index/index'
+
 
 const routers = [{
     path: '/',
@@ -9,17 +13,18 @@ const routers = [{
     },
     component: index
 }, {
-    path: 'https://feddy.org/about-feddy/',
+    path: 'https://blog.feddy.org/about-feddy/',
     name: "about",
+    
     meta: {
         title: '关于'
     },
 }, {
-    path: './active',
-    name: "active",
+    path: '/party',
+    name: "party",
     meta: {
         title: '线下活动'
     },
-    component: active
+    component: party
 }];
 export default routers;

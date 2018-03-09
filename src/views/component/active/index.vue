@@ -1,9 +1,11 @@
 <template>
         <div>
-           
+             <ih-head :isActive="isActive"></ih-head>
+                <div id="demo">
+                    
+                     敬请期待!
     
-    <ih-head :isActive="isActive"></ih-head>
-
+                </div> 
 
         </div>
 </template>
@@ -20,3 +22,11 @@ export default {
   }
 }
 </script>
+<style scoped>
+    #demo{
+        margin-top: 100px;
+        text-align: center;
+        font-size:20px;
+        color:#969696;
+    }
+</style>

@@ -25,14 +25,14 @@ body {
 
 }
 
-
-.content_list {
+.content_item {
     position: relative;
     overflow: hidden;
     height: 180px;
     text-align: center;
     border-radius: 3px;
     cursor: pointer;
+
 }
 
 .content {
@@ -85,7 +85,7 @@ body{
             <blog></blog>
         </div>
         <div class="layout-copy">
-            2011-2016 &copy; TalkingData
+            2017-2018 &copy; Feddy-Team
         </div>
     </div>
 </template>
