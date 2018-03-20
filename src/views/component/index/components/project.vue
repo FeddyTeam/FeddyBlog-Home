@@ -80,7 +80,7 @@
     </div>
 </template>
 <script>
-import a from '../../../../image/logo.png';
+
 import itemTitle from './itemTitle';
 
 var project = [{

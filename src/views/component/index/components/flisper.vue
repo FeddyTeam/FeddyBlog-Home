@@ -23,8 +23,8 @@
 import Swiper from '../../../../libs/swiper.min.js';
 
 /* import p1 from '../../../image/IMG_4023.jpg'; */
-import p2 from 'http://p5942h2x3.bkt.clouddn.com/IMG_7025.JPG';
-import p3 from 'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG';
+/* import p2 from 'http://p5942h2x3.bkt.clouddn.com/IMG_7025.JPG';
+import p3 from 'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG'; */
 export default {
      data() {
         return {
@@ -38,12 +38,12 @@ export default {
                 {
                     tag: 2,
                     title: "Feddy线下分享会",
-                    src: p2
+                    src: 'http://p5942h2x3.bkt.clouddn.com/IMG_7025.JPG'
                 },
                 {
                     tag: 3,
                     title: "Feddy线下分享会",
-                    src: p3
+                    src: 'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG'
                 }
             ]
         }
@@ -63,17 +63,7 @@ export default {
                     el: '.swiper-pagination',
                     type: 'bullets',
                 },
-
-                // 前进后退按钮
-               /*  nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev', */
-
-                // 滚动条
-                // scrollbar: '.swiper-scrollbar',
             });
-        /* var swiper1 = new Swiper('#swiper1');
-        var swiper2 = new Swiper('#swiper2');
-        var swiper3 = new Swiper('#swiper3'); */
         })
 
     }
