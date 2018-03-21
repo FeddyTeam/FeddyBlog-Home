@@ -76,7 +76,7 @@ body{
 
 <template>
     <div class="layout">
-        <ih-head :isActive="isActive"></ih-head>
+        <ih-head :isActive="isActive" :scroll="scroll"></ih-head>
         <flisper></flisper>
        
         <div class="main-body">
@@ -109,6 +109,7 @@ export default {
     data () {
         return {
              isActive: 0,
+             scroll:true
         }
     }
  

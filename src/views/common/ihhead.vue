@@ -1,9 +1,10 @@
 <style>
 
+/* 导航不位于最顶端 */
 .layout-ceiling {
     background: #464c5b;
-    height: 60px;
-    line-height: 60px;
+    height: 55px;
+    line-height: 55px;
     font-size: 16px;
     overflow: hidden;
     position: fixed;
@@ -12,10 +13,10 @@
     width: 100%;
 }
 
-.layout-ceiling + *{
+/* .layout-ceiling + *{
     margin-top:55px;
 }
-
+ */
 .layout-ceiling .layout-logo {
     float: left;
     height: 100%;
@@ -67,11 +68,40 @@
 }
 
 
+/* 导航位于顶端 */
+
+ .layout-ceiling.scroll{
+    background: rgba(70,76,91,0);
+}
+
+.scroll.layout-ceiling .layout-logo .title {
+    color: #fff;
+}
+
+
+
+.scroll .layout-ceiling-main li.active,
+.scroll .layout-ceiling-main li:hover {
+    background: rgba(1,1,1,0);
+}
+
+.scroll .layout-ceiling-main li a {
+    color: #fff;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.scroll .layout-ceiling-main .active a,
+.scroll .layout-ceiling-main li a:hover {
+    color: #ffb101;
+}
+
+
 </style>
 
 <template>
 
-    <div class="layout-ceiling">
+    <div class="layout-ceiling" :class="{scroll:scroll}" >
 
         <div class="layout-logo">
             <img src="../../image/logo.png">
@@ -85,7 +115,6 @@
             :class='{"active":isActive == item.status}'>
                 <a @click = "toPath(item.path)">{{item.name}}</a>
             </li>
-
         </div>
     </div>
   
@@ -96,11 +125,15 @@ export default {
         isActive:{
             type:Number,
             required:true   
+        },
+        scroll:{
+            type:Boolean,
+            required:true
         }
     },
     data () {
         return {
-           
+            scroll: true,
             nav:[
                 {
                     status:0,
@@ -111,7 +144,7 @@ export default {
                     status: 1,
                     name: "博客",
                     path: "/blog"
-                }, {
+                }, {    
                     status: 2,
                     name: "线下活动",
                     path: "/party"
@@ -121,9 +154,10 @@ export default {
                      path: "/about"
                  }
             ]
-               
-            
         }
+    },
+    mounted () {
+        window.addEventListener('scroll',navScroll());
     },
     methods: {
         toPath(url){
@@ -133,6 +167,20 @@ export default {
                 window.open('https://blog.feddy.org/about-feddy/')
             }else{
                 this.$router.push(url);
+                if(url === '/party'){
+                    this.scroll = false;
+                }else{
+                    this.scroll = true;
+                }
+            }
+        },
+        scrollNav(){
+            console.log('scrolling..');
+            if(document.documentElement.scrollTop == 0){
+                //网页被卷起来的高度
+                this.scroll = true;
+            }else{
+                this.scroll = false;
             }
         }
     }

@@ -78,7 +78,7 @@
                 </Col>
             </Row>
         </div>
-    <div class="more" @click="$router.push('/party')">更多&nbsp;>></div>
+    <div class="more" @click="toParty()">更多&nbsp;>></div>
 
     </div>
 </template>
@@ -88,6 +88,7 @@
      'http://upload-images.jianshu.io/upload_images/2865721-283860273314f22c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
      "http://upload-images.jianshu.io/upload_images/2865721-b7c651e8e40549bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
     'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG'
+   
  ]
 import itemTitle from './itemTitle';
 export default {
@@ -118,6 +119,9 @@ export default {
         }
     },
     methods: {
+        toParty(){
+            this.$router.push('/party');
+        }
     }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
         <div>
-             <ih-head :isActive="isActive"></ih-head>
+             <ih-head :isActive="isActive" :scroll="scroll" ></ih-head>
                 <div id="demo">
                     
                      敬请期待!
@@ -17,7 +17,8 @@ export default {
   },
   data () {
       return {
-          isActive:2
+          isActive:2,
+         scroll:false
       }
   }
 }
