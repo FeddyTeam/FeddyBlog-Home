@@ -37,19 +37,19 @@
         time: "2017-12-06",
         author: "frank"
     }, {
-        id: "1",
+        id: "2",
         name: "有趣的 CouchDB 和 PouchDB",
         url: "https://blog.feddy.org/funny-couchdb-and-pouchdb/",
         time: "2017-08-20",
         author: "Nulla"
     }, {
-        id: "1",
+        id: "3",
         name: "使用Yeoman定制前端脚手架",
         url: "https://blog.feddy.org/shi-yong-yeomanding-zhi-qian-duan-jiao-shou-jia/",
         time: "2017-08-15",
         author: "Jake"
     }, {
-        id: "1",
+        id: "4",
         name: "JavaScript 字符码和字节码转换",
         url: "https://blog.feddy.org/javascript-zi-fu-ma-he-zi-jie-ma-zhuan-huan/",
         time: "2017-07-28",
@@ -139,11 +139,11 @@
         font-size: 16px;
         overflow: hidden;
         color:#8c8c8c;
-        
+
 
     }
-    
-    .hotPage>div:hover {   
+
+    .hotPage>div:hover {
         color:#6b6b6b;
         text-decoration: underline;
     }

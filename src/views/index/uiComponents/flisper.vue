@@ -1,5 +1,5 @@
 <template>
-  
+
     <div class="flisper">
 
         <div class="swiper-container" style="height:100%">
@@ -20,12 +20,12 @@
 
 </template>
 <script>
-import Swiper from '../../../../libs/swiper.min.js';
-
-/* import p1 from '../../../image/IMG_4023.jpg'; */
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css';
+/* import p1 from '@images/IMG_4023.jpg'; */
 /* import p2 from 'http://p5942h2x3.bkt.clouddn.com/IMG_7025.JPG';
 import p3 from 'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG'; */
-import p1 from  '../../../../image/timg (2).jpg'
+import p1 from  '@images/timg (2).jpg'
 export default {
      data() {
         return {
@@ -36,7 +36,7 @@ export default {
                     title: "Feddy-Team",
                     subTitle:"—— —— 共同成长",
                     src: p1
-                }, 
+                },
                 {
                     tag: 2,
                     title: "第1次分享会",
@@ -61,23 +61,18 @@ export default {
             this.mySwiper = new Swiper('.swiper-container', {
                 direction: 'horizontal',
                 loop: true,
-
-                // 分页器
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'bullets',
-                },
+                autoplay : 3000,
+                pagination: '.swiper-pagination',
+                paginationType: 'bullets',
+                paginationClickable: true
             });
-            
+
         })
 
     }
 }
 </script>
 <style scoped>
-
-@import '../../../../css/swiper.min.css';
-@import '../../../../css/animate.css';
 
 .flisper {
     height: 550px;

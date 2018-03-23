@@ -1,63 +1,3 @@
-
-<style scoped>
-
-.content_item:hover {
- box-shadow: 0 5px 8px 2px #b6b6b6;
- -webkit-animation-name:hover;
- -webkit-animation-duration:0.5s;
- -webkit-animation-iteration-count: 1;
--webkit-animation-fill-mode:forwards;
-
-}
-
-@keyframes hover {
-    0%{}
-    100%{    
-        -webkit-transform: translate(0, -3px) scale(1.05, 1.05);
-        -moz-transform: translate(0, -2px) scale(1.05, 1.05);
-        transform: translate(0, -2px) scale(1.05, 1.05);
-    }
-}
-
-.content_list:nth-child(1) .content_item {
-    background: #ffabab;
-}
-
-.content_list:nth-child(2) .content_item{
-    background: #7dd0e3;
-}
-
-.content_list:nth-child(3) .content_item{
-    background: #b0b2ed;
-}
-
-.content_list:nth-child(4) .content_item{
-    background: #e9d547;
-}
-
-
-
-
-.content_item .text {
-     font-size: 14px; 
-    color:#fff;
-    height: 70px;
-    /* line-height: 50px; */
-    margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top:0;
-    vertical-align: middle;
-}
-.content_item .text h4{
-    font-size: 20px;
-     font-weight: bold;
-     margin: 10px 0;
-}
-</style>
-
 <template>
     <div class="project">
         <itemTitle :title="title"></itemTitle>
@@ -122,7 +62,7 @@ export default {
                 ENName: "OpenSourse",
                  discribe: "来呀，快活呀，反正有，大把时光"
             },
-           
+
             project: project
         }
     },
@@ -138,3 +78,62 @@ export default {
     }
 }
 </script>
+
+
+<style lang="less" scoped>
+
+@keyframes hover {
+    0%{}
+    100%{
+        transform: translate(0, -2px) scale(1.05, 1.05);
+    }
+}
+
+.content_item{
+    position: relative;
+    overflow: hidden;
+    height: 180px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    .text {
+        font-size: 14px;
+       color:#fff;
+       height: 70px;
+       /* line-height: 50px; */
+       margin: auto;
+       position: absolute;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       top:0;
+       vertical-align: middle;
+       h4{
+           font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+       }
+   }
+   &:hover {
+       box-shadow: 0 5px 8px 2px #b6b6b6;
+       animation: hover .5s;
+       animation-fill-mode:forwards;
+   }
+   .content_list:nth-child(1) &{
+       background: #ffabab;
+   }
+
+   .content_list:nth-child(2) &{
+       background: #7dd0e3;
+   }
+
+   .content_list:nth-child(3) &{
+       background: #b0b2ed;
+   }
+
+   .content_list:nth-child(4) &{
+       background: #e9d547;
+   }
+}
+
+</style>

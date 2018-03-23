@@ -1,24 +1,20 @@
 <template>
         <div>
-             <ih-head :isActive="isActive" :scroll="scroll" ></ih-head>
+             <IhHead :isActive="isActive" :scroll="scroll" ></IhHead>
                 <div id="demo">
-                    
+
                      敬请期待!
-    
-                </div> 
+
+                </div>
 
         </div>
 </template>
 <script>
-import ihHead from "../../common/ihhead"
 export default {
-  components: {
-      ihHead,
-  },
   data () {
       return {
-          isActive:2,
-         scroll:false
+        isActive:2,
+        scroll:true
       }
   }
 }

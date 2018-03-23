@@ -1,68 +1,3 @@
-
-<style scoped>
-
-
-.content_item img{
-    overflow: hidden;
-    width: 100%;
-}
-.content_item:hover {
-    box-shadow: 0 5px 8px 2px #b6b6b6;
-    -webkit-animation-name: hover;
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-fill-mode: both;
-}
-
-@keyframes hover {
-    0% {}
-    100% {
-        -webkit-transform: translate(0, -3px) scale(1.05, 1.05);
-        -moz-transform: translate(0, -2px) scale(1.05, 1.05);
-        transform: translate(0, -2px) scale(1.05, 1.05);
-    }
-}
-
-
-.content_item .text{
-    position: absolute;
-    width: 100%;
-    top:0;
-    font-size: 16px;
-    font-weight: bold;
-    height: 100%;
-    background: #000;
-    opacity:0;
-
-}
-.content_item .text:hover{
-    -webkit-animation-name:text-hover;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-}
-@keyframes text-hover {
-    from{
-        opacity:0;
-    }to{
-        opacity:0.3;
-    }
-}
-.content_item .text div{
-    margin: auto;
-    position: absolute;
-    height: 40px;
-    line-height: 40px;
-    left: 0;
-    right: 0;
-    bottom:0;
-    top:0;
-    color:#fff;
-}
-
-
-
-</style>
-
 <template>
     <div class="active">
         <itemTitle :title = "title"></itemTitle>
@@ -83,12 +18,11 @@
     </div>
 </template>
 <script>
-/* import a from "../../../image/logo.png" */
+/* import a from "@images/logo.png" */
  let pic = [
-     'http://upload-images.jianshu.io/upload_images/2865721-283860273314f22c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
-     "http://upload-images.jianshu.io/upload_images/2865721-b7c651e8e40549bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+    'http://upload-images.jianshu.io/upload_images/2865721-283860273314f22c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
+    "http://upload-images.jianshu.io/upload_images/2865721-b7c651e8e40549bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
     'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG'
-   
  ]
 import itemTitle from './itemTitle';
 export default {
@@ -125,3 +59,59 @@ export default {
     }
 }
 </script>
+
+
+<style lang="less" scoped>
+
+.content_item{
+    &:hover {
+        box-shadow: 0 5px 8px 2px #b6b6b6;
+        animation: hover .5s 1;
+        animation-fill-mode: both;
+    }
+    img{
+        overflow: hidden;
+        width: 100%;
+    }
+    .text{
+        position: absolute;
+        width: 100%;
+        top:0;
+        font-size: 16px;
+        font-weight: bold;
+        height: 100%;
+        background: #000;
+        opacity:0;
+        &:hover{
+            animation: text-hover 1s;
+            animation-fill-mode: both;
+        }
+        div{
+            margin: auto;
+            position: absolute;
+            height: 40px;
+            line-height: 40px;
+            left: 0;
+            right: 0;
+            bottom:0;
+            top:0;
+            color:#fff;
+        }
+    }
+}
+
+@keyframes hover {
+    0% {}
+    100% {
+        transform: translate(0, -2px) scale(1.05, 1.05);
+    }
+}
+
+@keyframes text-hover {
+    from{
+        opacity:0;
+    }to{
+        opacity:0.3;
+    }
+}
+</style>

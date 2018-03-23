@@ -1,21 +1,31 @@
 import Vue from 'vue';
-import iView from 'iview';
 //import VueAwesomeSwiper from 'vue-awesome-swiper';
 
 import VueRouter from 'vue-router';
 import Routers from './router';
 
-import Util from './libs/util';
+import Util from '@libs/util';
 import App from './app.vue';
 import 'iview/dist/styles/iview.css';
+import 'animate.css';
+import ihComponents from '@components';
 
 
 Vue.use(VueRouter);
 //Vue.use(VueAwesomeSwiper);
 
-Vue.use(iView);
+import {
+    LoadingBar,
+    Row,
+    Col
+} from 'iview';
 
+Vue.component('Row',Row);
+Vue.component('Col',Col);
 
+Object.keys(ihComponents).forEach((key) => {
+    Vue.component(key, ihComponents[key]);
+});
 
 // 路由配置
 const RouterConfig = {
@@ -25,16 +35,16 @@ const RouterConfig = {
 const router = new VueRouter(RouterConfig);
 
 router.beforeEach((to, from, next) => {
-    iView.LoadingBar.start();
+    LoadingBar.start();
     Util.title(to.meta.title);
     next();
 });
 
 router.afterEach(() => {
-    iView.LoadingBar.finish();
+    LoadingBar.finish();
     window.scrollTo(0, 0);
-}); 
- 
+});
+
 
 
 new Vue({
