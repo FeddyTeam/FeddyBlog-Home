@@ -1,6 +1,6 @@
-import IhHead from './ihHead';
+import FeHead from './FeHead';
 
 
 export default {
-    IhHead
+    FeHead
 };
