@@ -1,6 +1,6 @@
 <template>
         <div>
-             <IhHead :isActive="isActive" :scroll="scroll" ></IhHead>
+             <FeHead :isActive="isActive" :scroll="scroll" ></FeHead>
                 <div id="demo">
 
                      敬请期待!

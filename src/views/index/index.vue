@@ -1,6 +1,6 @@
 <template>
     <div class="layout">
-        <IhHead :isActive="isActive" :scroll="scroll"></IhHead>
+        <FeHead :isActive="isActive" :scroll="scroll"></FeHead>
         <flisper></flisper>
 
         <div class="main-body">

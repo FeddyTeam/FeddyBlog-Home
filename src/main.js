@@ -8,7 +8,7 @@ import Util from '@libs/util';
 import App from './app.vue';
 import 'iview/dist/styles/iview.css';
 import 'animate.css';
-import ihComponents from '@components';
+import FeComponents from '@components';
 
 
 Vue.use(VueRouter);
@@ -23,8 +23,8 @@ import {
 Vue.component('Row',Row);
 Vue.component('Col',Col);
 
-Object.keys(ihComponents).forEach((key) => {
-    Vue.component(key, ihComponents[key]);
+Object.keys(FeComponents).forEach((key) => {
+    Vue.component(key, FeComponents[key]);
 });
 
 // 路由配置
