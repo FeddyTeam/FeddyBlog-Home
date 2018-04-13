@@ -6,20 +6,25 @@ import Routers from './router'
 
 import Util from '@libs/util'
 import App from './app.vue'
-import 'iview/dist/styles/iview.css'
+import '@/theme/index.less'
 import 'animate.css'
 import FeComponents from '@components'
+
+
+Vue.prototype.isMobile = /mobile/i.test(window.navigator.userAgent)
 
 Vue.use(VueRouter)
 
 import {
   LoadingBar,
   Row,
-  Col
+  Col,
+  Button
 } from 'iview'
 
 Vue.component('Row', Row)
 Vue.component('Col', Col)
+Vue.component('Button', Button)
 
 Object.keys(FeComponents).forEach((key) => {
   Vue.component(key, FeComponents[ key ])
