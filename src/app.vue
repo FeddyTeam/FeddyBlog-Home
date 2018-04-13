@@ -1,23 +1,10 @@
 <template>
-    <div>
-        <router-view></router-view>
-    </div>
+<div id="app">
+  <keep-alive>
+    <router-view></router-view>
+  </keep-alive>
+</div>
 </template>
 <script>
-    export default {
-        data() {
-            return {
-
-            };
-        },
-        mounted() {
-
-        },
-        beforeDestroy() {
-
-        },
-        methods: {
-
-        }
-    };
+export default {};
 </script>

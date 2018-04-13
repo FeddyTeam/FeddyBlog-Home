@@ -35,11 +35,7 @@ export default {
 
 };
 </script>
-<style lang="less">
-body {
-    min-width: 1000px;
-}
-
+<style lang="less" scoped>
 .more {
     font-weight: normal;
     float: right;
@@ -88,4 +84,9 @@ body {
     color: #9ea7b4;
 }
 
+</style>
+<style lang="less">
+body{
+  min-width: 1200px;
+}
 </style>

@@ -18,7 +18,7 @@
     </div>
 </template>
 <script>
-/* import a from "@images/logo.png" */
+/* import a from "@assets/logo.png" */
  let pic = [
     'http://upload-images.jianshu.io/upload_images/2865721-283860273314f22c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
     "http://upload-images.jianshu.io/upload_images/2865721-b7c651e8e40549bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
