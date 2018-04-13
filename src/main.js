@@ -9,12 +9,6 @@ import App from './app.vue';
 import 'iview/dist/styles/iview.css';
 import 'animate.css';
 import FeComponents from '@components';
-import VueAnalytics from 'vue-analytics';
-
-// google analytics
-Vue.use(VueAnalytics, {
-    id: 'UA-87261065-5'
-});
 
 Vue.use(VueRouter);
 //Vue.use(VueAwesomeSwiper);
@@ -42,6 +36,9 @@ const router = new VueRouter(RouterConfig);
 router.beforeEach((to, from, next) => {
     LoadingBar.start();
     Util.title(to.meta.title);
+
+    ga('send', 'pageview');
+
     next();
 });
 
