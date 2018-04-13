@@ -57,6 +57,7 @@ export default {
         direction: 'horizontal',
         loop: true,
         autoplay: 3000,
+        autoplay: false,
         pagination: '.swiper-pagination',
         paginationType: 'bullets',
         paginationClickable: true
@@ -67,51 +68,62 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style scoped lang="less">
+@import url("~@/theme/base.less");
 .flisper {
   height: 550px;
   position: relative;
   overflow: hidden;
   margin-bottom: 70px;
+  @media @mobile{
+    height: 5rem;
+    margin-bottom: .7rem;
+  }
+  img {
+    opacity: 0.7;
+    width: 100%;
+    @media @mobile{
+      height: 100%;
+      width: auto;
+    }
+  }
+  .imgDiv {
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    background: rgba(0, 0, 0,1);
+    @media @mobile{
+      height: 100%;
+      position: static;
+    }
+  }
 }
 
 h4 {
   color: #fff;
   font-size: 50px;
-  opacity: 1;
-  height: 50px;
   position: absolute;
-  top: 0;
-  margin: auto;
-  bottom: 100px;
-  right: 200px;
-  left: 0;
+  top: 200px;
+  left: 400px;
   text-align: center;
+  @media @mobile{
+    font-size: .5rem;
+    top: 2rem;
+    left: 1.5rem;
+  }
 }
 
 h3 {
   color: #fff;
   font-size: 30px;
   opacity: 1;
-  height: 50px;
   position: absolute;
-  top: 100px;
-  margin: auto;
-  bottom: 0;
-  right: 0;
-  left: 150px;
-  text-align: center;
-}
-
-.flisper .imgDiv {
-  position: absolute;
-  width: 100%;
-  top: -100px;
-  background: rgba(0, 0, 0);
-}
-
-.flisper img {
-  opacity: 0.7;
-  width: 100%;
+  top: 300px;
+  left: 600px;
+  @media @mobile{
+    font-size: .4rem;
+    top: 3rem;
+    left: 2.5rem;
+  }
 }
 </style>

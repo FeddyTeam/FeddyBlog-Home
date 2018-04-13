@@ -1,41 +1,41 @@
 <template>
-    <div class="layout">
-        <FeHead :isActive="isActive" :scroll="scroll"></FeHead>
-        <flisper></flisper>
+<div class="layout">
+  <FeHead :isActive="isActive" :scroll="scroll"></FeHead>
+  <flisper></flisper>
 
-        <div class="main-body">
-            <active></active>
-            <project></project>
-            <blog></blog>
-        </div>
-        <div class="layout-copy">
-            2017-2018 &copy; Feddy-Team
-        </div>
-    </div>
+  <div class="main-body">
+    <active></active>
+    <project></project>
+    <blog></blog>
+  </div>
+  <div class="layout-copy">
+    2017-2018 &copy; Feddy-Team
+  </div>
+</div>
 </template>
 <script>
-
 import active from './uiComponents/active';
 import flisper from './uiComponents/flisper';
 import project from './uiComponents/project';
 import blog from './uiComponents/blog';
 export default {
-    components: {
-        active,
-        project,
-        flisper,
-        blog
-    },
-    data () {
-        return {
-             isActive: 0,
-             scroll:false
-        }
+  components: {
+    active,
+    project,
+    flisper,
+    blog
+  },
+  data() {
+    return {
+      isActive: 0,
+      scroll: false
     }
+  }
 
 };
 </script>
 <style lang="less" scoped>
+@import url("~@/theme/base.less");
 .more {
     font-weight: normal;
     float: right;
@@ -45,7 +45,7 @@ export default {
     color: #949494;
     font-size: 14px;
     text-decoration-line: underline;
-    &:hover{
+    &:hover {
         color: #208db7;
     }
 }
@@ -70,6 +70,10 @@ export default {
     position: relative;
     border-radius: 4px;
     overflow: hidden;
+    @media @mobile{
+      border: none;
+      border-radius: 0;
+    }
 }
 
 .layout-header {
@@ -82,11 +86,5 @@ export default {
     text-align: center;
     padding: 10px 0 20px;
     color: #9ea7b4;
-}
-
-</style>
-<style lang="less">
-body{
-  min-width: 1200px;
 }
 </style>
