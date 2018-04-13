@@ -48,7 +48,7 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach(() => {
-    ga('send', 'pageview');
+    ga('send', 'pageview', location.pathname);
     LoadingBar.finish();
     window.scrollTo(0, 0);
 });
