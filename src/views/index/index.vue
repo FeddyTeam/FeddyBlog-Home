@@ -1,6 +1,5 @@
 <template>
 <div class="layout">
-  <FeHead :isActive="isActive" :scroll="scroll"></FeHead>
   <flisper></flisper>
 
   <div class="main-body">
@@ -26,10 +25,7 @@ export default {
     blog
   },
   data() {
-    return {
-      isActive: 0,
-      scroll: false
-    }
+    return {}
   }
 
 };

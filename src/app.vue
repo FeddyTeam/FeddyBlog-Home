@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+  <FeHead></FeHead>
   <keep-alive>
     <router-view></router-view>
   </keep-alive>
