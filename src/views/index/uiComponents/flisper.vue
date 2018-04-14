@@ -57,7 +57,6 @@ export default {
         direction: 'horizontal',
         loop: true,
         autoplay: 3000,
-        autoplay: false,
         pagination: '.swiper-pagination',
         paginationType: 'bullets',
         paginationClickable: true
