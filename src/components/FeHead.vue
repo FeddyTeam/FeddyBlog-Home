@@ -16,20 +16,12 @@
 <script>
 import logo from '@assets/logo.png'
 export default {
-  props: {
-    isActive: {
-      type: Number,
-      required: true
-    },
-    scroll: {
-      type: Boolean,
-      required: true
-    }
-  },
+  props: {},
   data() {
     return {
       logo,
-      headerBg: this.scroll,
+      isActive: '',
+      headerBg: true,
       menuStatus: false,
       nav: [{
           status: 0,
@@ -52,11 +44,6 @@ export default {
       ]
     }
   },
-  mounted() {
-    if (!this.isMobile) {
-      window.addEventListener('scroll', this.scrollNav);
-    }
-  },
   methods: {
     clickMenu() {
       this.menuStatus = !this.menuStatus
@@ -75,6 +62,13 @@ export default {
           this.headerBg = false;
         }
       }
+
+      this.changeMenuActive()
+    },
+    changeMenuActive() {
+      this.isActive = this.nav.findIndex(item=>{
+        return item.path == this.$route.path
+      })
     },
     scrollNav() {
       if (document.documentElement.scrollTop == 0) {
@@ -84,7 +78,16 @@ export default {
         this.headerBg = true;
       }
     }
-  }
+  },
+  mounted() {
+    this.changeMenuActive()
+    if(this.$route.path=='/'){
+      this.headerBg = false
+    }
+    if (!this.isMobile) {
+      window.addEventListener('scroll', this.scrollNav);
+    }
+  },
 }
 </script>
 
