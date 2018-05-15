@@ -35,21 +35,21 @@ var project = [{
   },
   {
     id: 2,
-    href: "https://github.com/FeddyTeam/tongbu.fun",
-    describe: "vue + ghost  搭建官网",
-    theme: "Feddy博客",
+    href: "https://github.com/FeddyTeam/FeddyBlog-Home",
+    describe: "vue 搭建官网",
+    theme: "Feddy",
     color: "#f2c7c7"
   }, {
     id: 3,
-    href: "https://github.com/FeddyTeam/tongbu.fun",
-    describe: "let's play together",
-    theme: "Feddy线下活动管理平台",
+    href: "https://github.com/SuperKieran/TKL",
+    describe: "Hexo博客主题",
+    theme: "Hexo Theme",
     color: "#c8c9f0"
   }, {
     id: 4,
-    href: "https://github.com/FeddyTeam/tongbu.fun",
-    describe: "待办事项管理平台",
-    theme: "TodoList",
+    href: "https://github.com/SuperKieran/hexo-generator-search-zip",
+    describe: "Hexo 站内搜索",
+    theme: "Hexo Search",
     color: "#ecde74"
   }
 ]
