@@ -19,7 +19,7 @@
 
   </div>
   <div class="mobile-btn" v-if="isMobile">
-    <Button type="primary" icon="ios-more">更多&nbsp;>></Button>
+    <Button type="primary" icon="ios-more" @click="toGithub()">更多&nbsp;>></Button>
   </div>
 </div>
 </template>
@@ -72,7 +72,7 @@ export default {
 
   methods: {
     toGithub() {
-      window.open("https://github.com/FeddyTeam", '_blank');
+      window.open("https://github.com/FeddyTeam/Feddy-Wiki/wiki/Feddy-Wiki#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE", '_blank');
     },
     toProject(href) {
       window.open(href, '_blank');

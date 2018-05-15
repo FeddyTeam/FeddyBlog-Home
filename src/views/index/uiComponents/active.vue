@@ -16,7 +16,7 @@
     </Row>
   </div>
   <div class="mobile-btn" v-if="isMobile">
-    <Button type="primary" icon="ios-more">更多&nbsp;>></Button>
+    <Button type="primary" icon="ios-more"  @click="toParty()">更多&nbsp;>></Button>
   </div>
 </div>
 </template>
