@@ -2,7 +2,7 @@
 <div class="layout-ceiling" :class="{scroll:headerBg,active:menuStatus}">
   <div class="menu" v-if="isMobile" @click="clickMenu"></div>
   <div class="layout-logo">
-    <img :src="logo">
+    <img src="https://image.feddy.org/logo.png">
     <div class="title">Feddy</div>
   </div>
 
@@ -14,12 +14,12 @@
 </div>
 </template>
 <script>
-import logo from '@assets/logo.png'
+// import logo from 'https://image.feddy.org/logo.png'
 export default {
   props: {},
   data() {
     return {
-      logo,
+      // logo,
       isActive: '',
       headerBg: true,
       menuStatus: false,

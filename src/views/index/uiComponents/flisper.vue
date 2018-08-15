@@ -21,7 +21,7 @@ import 'swiper/dist/css/swiper.min.css';
 /* import p1 from '@assets/IMG_4023.jpg'; */
 /* import p2 from 'http://p5942h2x3.bkt.clouddn.com/IMG_7025.JPG';
 import p3 from 'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG'; */
-import p1 from '@assets/timg (2).jpg'
+// import p1 from 'https://image.feddy.org/timg%20%282%29.jpg'
 export default {
   data() {
     return {
@@ -30,19 +30,19 @@ export default {
           tag: 1,
           title: "Feddy-Team",
           subTitle: "—— —— 共同成长",
-          src: p1
+          src: 'https://image.feddy.org/timg%20%282%29.jpg'
         },
         {
           tag: 2,
           title: "第1次分享会",
           subTitle: '—— —— 前端发展趋势',
-          src: 'http://p5942h2x3.bkt.clouddn.com/IMG_7025.JPG'
+          src: 'https://image.feddy.org/1jpg.jpg'
         },
         {
           tag: 3,
           title: "第2次分享会",
           subTitle: "—— —— 薪火相传",
-          src: 'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG'
+          src: 'https://image.feddy.org/IMG_4062.JPG'
         }
       ]
     }
