@@ -26,7 +26,7 @@ export default {
           tag: 1,
           title: "Feddy-Team",
           subTitle: "—— —— 共同成长",
-          src: 'https://image.feddy.org/timg%20%282%29.jpg'
+          src: 'https://image.feddy.org/timg.jpg'
         },
         {
           tag: 2,
