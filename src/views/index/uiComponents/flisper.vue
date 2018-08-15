@@ -18,10 +18,6 @@
 <script>
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css';
-/* import p1 from '@assets/IMG_4023.jpg'; */
-/* import p2 from 'http://p5942h2x3.bkt.clouddn.com/IMG_7025.JPG';
-import p3 from 'http://p5942h2x3.bkt.clouddn.com/IMG_4062.JPG'; */
-// import p1 from 'https://image.feddy.org/timg%20%282%29.jpg'
 export default {
   data() {
     return {

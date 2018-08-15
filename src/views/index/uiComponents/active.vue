@@ -21,12 +21,7 @@
 </div>
 </template>
 <script>
-/* import a from "@assets/logo.png" */
-let pic = [
-  'https://image.feddy.org/active1.png',
-  "https://image.feddy.org/active2.png",
-  'https://image.feddy.org/IMG_7025.JPG'
-]
+
 import itemTitle from './itemTitle';
 export default {
   components: {
