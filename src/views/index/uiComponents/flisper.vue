@@ -4,7 +4,7 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="item in flisper" :key="item.tag">
         <div class="imgDiv">
-          <img :src="item.src" alt="">
+          <a :href="item.link || ''"><img :src="item.src" alt=""></a>
         </div>
         <h4>{{item.title}}</h4>
         <h3>{{item.subTitle}}</h3>
@@ -26,13 +26,14 @@ export default {
           tag: 1,
           title: "Feddy-Team",
           subTitle: "—— —— 共同成长",
-          src: 'https://image.feddy.org/timg.jpg'
+          src: 'https://image.feddy.org/timg.jpg',
+          link: 'https://timemail.net/'
         },
         {
           tag: 2,
-          title: "第1次分享会",
-          subTitle: '—— —— 前端发展趋势',
-          src: 'https://image.feddy.org/1jpg.jpg'
+          title: "时光邮局",
+          subTitle: '—— —— 写给未来',
+          src: 'https://image.feddy.org/WechatIMG99.png'
         },
         {
           tag: 3,

@@ -28,9 +28,9 @@ import itemTitle from './itemTitle';
 
 var project = [{
     id: 1,
-    href: 'https://github.com/FeddyTeam/tongbu.fun',
-    describe: "无需登录的文字同步平台",
-    theme: "同步Fun！",
+    href: 'https://timemail.net/',
+    describe: "给你的未来写一封信",
+    theme: "时光邮局",
     color: "#a3e2f0"
   },
   {
