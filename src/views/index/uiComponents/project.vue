@@ -28,23 +28,23 @@ import itemTitle from './itemTitle';
 
 var project = [{
     id: 1,
-    href: 'https://timemail.net/',
-    describe: "给你的未来写一封信",
+    href: "https://timemail.net/?ref=feddy",
+    describe: "给未来写封信",
     theme: "时光邮局",
-    color: "#a3e2f0"
+    color: "#ffabab"
+  },{
+    id: 2,
+    href: "https://github.com/FeddyTeam/tongbu.fun",
+    describe: "同步fun",
+    theme: "无需登陆的文字同步平台",
+    color: "#7dd0e3"
   },
   {
     id: 2,
     href: "https://github.com/FeddyTeam/FeddyBlog-Home",
     describe: "Vue 搭建官网",
     theme: "Feddy",
-    color: "#f2c7c7"
-  }, {
-    id: 4,
-    href: "https://timemail.net/?ref=feddy",
-    describe: "给未来写封信！",
-    theme: "时光邮局",
-    color: "#c8c9f0"
+    color: "#b0b2ed"
   }, {
     id: 4,
     href: "https://github.com/SuperKieran/TKL",

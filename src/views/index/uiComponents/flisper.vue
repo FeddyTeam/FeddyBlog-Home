@@ -22,25 +22,25 @@ export default {
   data() {
     return {
       mySwiper: "",
-      flisper: [{
+      flisper: [
+        {
           tag: 1,
+          title: "时光邮局",
+          subTitle: '—— —— 给未来写封信',
+          src: 'https://image.feddy.org/WechatIMG99.png'
+        },
+        {
+          tag: 2,
+          title: "第2次分享会",
+          subTitle: "—— —— 薪火相传",
+          src: 'https://image.feddy.org/IMG_4062.JPG'
+        },{
+          tag: 3,
           title: "Feddy-Team",
           subTitle: "—— —— 共同成长",
           src: 'https://image.feddy.org/timg.jpg',
           link: 'https://timemail.net/'
         },
-        {
-          tag: 2,
-          title: "时光邮局",
-          subTitle: '—— —— 写给未来',
-          src: 'https://image.feddy.org/WechatIMG99.png'
-        },
-        {
-          tag: 3,
-          title: "第2次分享会",
-          subTitle: "—— —— 薪火相传",
-          src: 'https://image.feddy.org/IMG_4062.JPG'
-        }
       ]
     }
   },
