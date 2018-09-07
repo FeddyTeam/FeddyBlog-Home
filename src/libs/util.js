@@ -1,6 +1,6 @@
 let util = {}
 util.title = function(title) {
-  title = title ? title + ' - Home' : 'iView project'
+  title = title ? title + ' - Feddy' : 'iView project'
   window.document.title = title
 }
 
